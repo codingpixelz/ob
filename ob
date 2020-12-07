@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Project 6</title>
+<style type="text/css">
+    body{background-color: lightblue;}
+    tr{text-align: center;font-size:20pt;}  
+    td{text-align: center;font-size:20pt;}  
+    table{border-collapse: collapse; background-color: pink;}}
+    
+</style>
+
+</html>
+<script type="text/javascript">
+function vOb()
+{
+    var i, strName, iNumofChars;
+
+    var astrObs=new Array(i);
+
+    strName=frmMain.tb1.value;
+
+    iNumofChars=strName.length;
+
+    for (i=0;i<=iNumofChars;i++) //go through letters
+    {
+        if(strName.charAt(i) == 'a'|| strName.charAt(i) == 'A') //if 'a', make 'oba'
+            astrObs[i] += "ob" + strName.charAt(i);
+        if(strName.charAt(i) == 'e' || strName.charAt(i) == 'E')
+            astrObs[i] += "ob" + strName.charAt(i);
+        if(strName.charAt(i) == 'i' || strName.charAt(i) == 'I')
+            astrObs[i] += "ob" + strName.charAt(i);
+        if(strName.charAt(i) == 'o' || strName.charAt(i) == 'O')
+            astrObs[i] += "ob" + strName.charAt(i);
+        if(strName.charAt(i) == 'u' || strName.charAt(i) == 'U')
+            astrObs[i] += "ob" + strName.charAt(i);
+        if(strName.charAt(i) == 'y' && strName.charAt(0) != 'y') //if not in 0 position
+            astrObs[i] += "ob" + strName.charAt(i);
+    }
+
+    frmMain.tb2.value=astrObs[i]; //print out the array
+ }
+</script>
+</head>
+<body>
+<form id="frmMain" method="post">
+	<table align="center" border="1" width="90%">
+        <tr><td><h1>Ob Translator</h1></td></tr>
+        <tr> <td>Enter Name, Phrase, Whatever:</td> </tr>
+        <tr> <td><input type="text" id="tb1" size="10"/></td></tr>
+        <tr> <td><input type="button" style="width:100px;height:40px;" value="Ob Talk!" id="btnOb" onclick="vOb()"/></td></tr>
+        <tr> <td>Ob Talk Translation:</td> </tr>
+        <tr> <td><input type="text" id="tb2" size="10"/></td></tr>
+    </table>
+
+</form>
+</body>
+</html>
